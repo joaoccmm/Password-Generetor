@@ -6,31 +6,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="gerador de senha, password generator">
   <link rel="stylesheet" href="styles.css">
-
   <title>Gerador de senha</title>
-
 </head>
 
-<body>
-  <h1>Gerador de Senha</h1>
-  <main class="container">
+<body class="centralize">
+  <div class="container">
     <div class="content">
-      <label>Tamanho <span id="valor"></span> caracteres</label>
-      <input id="slider" class="slider" type="range" min="4" max="25" value="8" />
-      <button id="button" class="button-cta" onclick="generatePassword()">Gerar senha</button>
+      <h1 class="title">Gerador de<br> senhas aleatórias</h1>
+      <div class="application">
+        <div id="quantityContent"></div>
+        <span class="subtitle">Quantidade de caracteres</span>
+        <div class="content_range">
+          <span id="pwdRangeStatus">15</span>
+          <input type="range" id="pwdRange" min="4" max="30" value="10">
+        </div>
+        <span class="subtitle">Caracteres utilizados</span>
+        <div id="pwdInputsChars">
+          <label for="numbers">
+            <input type="checkbox" id="numbers" name="numbers" checked>
+            <div class="checkbox"></div><span>123</span>
+          </label>
+          <label for="lowercase">
+            <input type="checkbox" id="lowercase" name="lowercase" checked>
+            <div class="checkbox"></div><span>abc</span>
+          </label>
+          <label for="uppercase">
+            <input type="checkbox" id="uppercase" name="uppercase" checked>
+            <div class="checkbox"></div><span>ABC</span>
+          </label>
+          <label for="special">
+            <input type="checkbox" id="special" name="special" checked>
+            <div class="checkbox"></div><span>$&#</span>
+          </label>
+        </div>
+        <button id="btnCopy" type="button">Copiar</button>
+      </div>
     </div>
-  </main>
-
-  <div id="container-password" class="container-password hide">
-    <label class="title">Sua senha gerada foi: </label>
-    <span id="password" class="password"></span>
-    <span class="tooltip">Clique na senha para copiar ☝️</span>
   </div>
-
-
-
-
-
 
   <script src="script.js"></script>
 </body>
